@@ -66,11 +66,12 @@ body {
   header a:hover {
     color: #b4a04d;
     font-weight: bold;
+    border-bottom: 2px solid #b4a04d;
   }
   
   header a:active {
-    color: #283ba7;
-    background-color: #283ba7;
+    color: #b4a04d;
+    background-color: none;
   }
   
   header nav ul {
@@ -92,13 +93,16 @@ body {
   }
 
   #showcase{
-        margin-top: -7em;
-        background-image: url('/Images/download.jpeg'); 
-        background-size: cover; /* Ensures the image covers the whole div */
-        background-position: center; /* Centers the image */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        height: 30em;
-        width: 100%; 
-        color: white;
-        padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -7em;
+    background-image: url('/Images/download.jpeg'); 
+    background-size: cover; /* Ensures the image covers the whole div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 30em;
+    width: 100%; 
+    color: white;
+    padding: 10px;
       }  
