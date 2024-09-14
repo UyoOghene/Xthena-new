@@ -1,0 +1,91 @@
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #16076d;
+    overflow-x: hidden ;
+  }
+
+  .container {
+    width: 80%;
+    height: 5em;
+    padding: 3px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  #header-icon{
+    height: 100px ;
+    width: 150px ;
+  } 
+
+  #header {
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    background-color: rgba(10, 8, 10, 0.4);    
+    color: #ffffff;
+    padding: 15px;
+    height: 5em;
+    min-height: 50px;
+  }
+  
+  header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  
+  header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+  }
+  
+  header #branding {
+    float: left;
+  }
+  
+  header #branding h1 {
+    margin: 0;
+  }
+  
+  header nav {
+    float: right;
+    margin-top: 10px;
+  }
+  
+  header .highlight,
+  header .current a {
+    color: #47daa99a;
+    font-weight: bold;
+  }
+  
+  header a:hover {
+    color: #b4a04d;
+    font-weight: bold;
+  }
+  
+  header a:active {
+    color: #283ba7;
+    background-color: #283ba7;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
