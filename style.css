@@ -103,31 +103,14 @@ body {
     cursor: pointer;
   }
 
-  /* #showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -7em;
-    background-image: url('/Images/showcasepng2.png');
-    background-size: cover; 
-    background-position: center center;  
-    background-repeat: no-repeat; 
-    height: 30em;
-    width: 100%; 
-    color: white;
-    padding: 10px;
-    filter: none; 
-    opacity: 1;  
-    object-fit: contain;
-  } */
   #showcase {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -7em;
-    background-size: cover; /* Ensures the image covers the whole div */
+    background-size: cover;
     background-position: center center;  
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100%; 
     color: white;
@@ -136,8 +119,7 @@ body {
     opacity: 1;
     object-fit: contain;
     
-    /* Key CSS properties for the carousel */
-    animation: carousel 20s infinite; /* 12 seconds total duration */
+    animation: carousel 20s infinite; 
   }
   
   @keyframes carousel {
@@ -168,7 +150,7 @@ body {
       
     }
 
-/* Showcase h1 animation */
+
 #showcase-h1 {
   font-weight: bolder;
   font-size: 80px;
@@ -199,11 +181,11 @@ body {
 
 }
 
-/* Showcase p animation */
+
 #showcase-p {
   color: #442ebe;
   position: relative;
-  animation: moveAndScale 4s ease-in-out forwards; /* Move left, right, then center and scale */
+  animation: moveAndScale 4s ease-in-out forwards; 
 }
 
 @keyframes moveAndScale {
@@ -252,27 +234,60 @@ body {
   border-radius: 30px;
 }
 #contact {
-  border: 3px solid #1d5de8;
-  padding: 5px;
-  color: #ffffff;
-  background: #35424a;
-  height: 15em;
-  width: 100%;
+  background-color: #f4f4f4; /* Light background color */
+  padding: 50px 0; /* Space around the section */
+  text-align: center; /* Center-align text and form elements */
 }
 
 #contact h1 {
-  float: left;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #442ebe; /* Match with the theme color */
 }
 
-#contact form {
-  float: right;
-  margin-top: 15px;
+#contact-form {
+  max-width: 600px; /* Restrict width for better readability */
+  margin: 0 auto; /* Center-align the form */
+  padding: 20px;
+  background: #ffffff; /* White background for the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
-#contact input {
-  padding: 4px;
-  height: 20px;
-  width: 200px;
+#contact-form label {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #442ebe; /* Match with the theme color */
+}
+
+#contact-form input[type="email"],
+#contact-form input[type="text"] {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#contact-form input[type="text"] {
+  height: 150px; /* Increase the height for the message box */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+#contactsubmit-btn {
+  background-color: #442ebe; /* Match with the theme color */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+#contactsubmit-btn:hover {
+  background-color: #3a1b77; /* Slightly darker color on hover */
 }
 .contact-card {
   background-color: #ffffff;
