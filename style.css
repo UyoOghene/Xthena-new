@@ -102,13 +102,28 @@ body {
     cursor: pointer;
   }
 
-  #showcase{
+  /* #showcase {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -7em;
-    /* margin: 0; */
-    background-image: url('/Images/showcasepng2.png'); 
+    background-image: url('/Images/showcasepng2.png');
+    background-size: cover; 
+    background-position: center center;  
+    background-repeat: no-repeat; 
+    height: 30em;
+    width: 100%; 
+    color: white;
+    padding: 10px;
+    filter: none; 
+    opacity: 1;  
+    object-fit: contain;
+  } */
+  #showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -7em;
     background-size: cover; /* Ensures the image covers the whole div */
     background-position: center center;  
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -116,14 +131,33 @@ body {
     width: 100%; 
     color: white;
     padding: 10px;
-    filter: none; /* Make sure no blur filters are applied */
-    opacity: 1;   /* Set opacity to 100% */
-     object-fit: contain;
-     /* overflow: hidden;  */
-
-      }  
-
-
+    filter: none;
+    opacity: 1;
+    object-fit: contain;
+    
+    /* Key CSS properties for the carousel */
+    animation: carousel 20s infinite; /* 12 seconds total duration */
+  }
+  
+  @keyframes carousel {
+    0% {
+      background-image: url('/Images/showcasepng2.png');
+    }
+    40% {
+      background-image: url('/Images/showcasepng2.png');
+    }
+    50% {
+      background-image: url('/Images/backgroundpic.jpeg');
+    }
+    90% {
+      background-image: url('/Images/backgroundpic.jpeg');
+    }
+    100% {
+      background-image: url('/Images/showcasepng2.png');
+    }
+  }
+  
+  
     #showcase-box{
       display: flex;
       justify-content: center;
@@ -131,17 +165,19 @@ body {
       flex-direction: column;
         flex-shrink: 1;
       
-
     }
 
 /* Showcase h1 animation */
 #showcase-h1 {
+  font-weight: bolder;
+  font-size: 80px;
   position: relative;
   color: black;
   animation: slideFromTop 2s forwards, changeColor 2s 2s forwards; 
 }
 
 @keyframes slideFromTop {
+
   0% {
     top: -100px;
     opacity: 0;
@@ -159,6 +195,7 @@ body {
   100% {
     color: blue;
   }
+
 }
 
 /* Showcase p animation */
@@ -184,7 +221,7 @@ body {
   }
   100% {
     left: 0;
-    transform: scale(1.5);
+    transform: scale(2);
   }
 }
     
