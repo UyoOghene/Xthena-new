@@ -6,18 +6,19 @@ body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #442ebe;
+    background-color: #f5f4f7;
     overflow-x: hidden ;
   }
 
-  .container {
+  .head-container {
     width: 80%;
     height: 5em;
     padding: 3px;
     margin: 0;
     overflow: hidden;
   }
-  .container::after {
+
+  .head-container::after {
     content: "";
     display: table;
     clear: both;
@@ -74,13 +75,13 @@ body {
   }
   
   header a:hover {
-    color: #b4a04d;
+    color: #3d209d;
     font-weight: bold;
-    border-bottom: 2px solid #b4a04d;
+    border-bottom: 2px solid #362ca9;
   }
   
   header a:active {
-    color: #b4a04d;
+    color: #4124b3;
     background-color: none;
   }
   
@@ -127,7 +128,7 @@ body {
     background-size: cover; /* Ensures the image covers the whole div */
     background-position: center center;  
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 30em;
+    height: 100vh;
     width: 100%; 
     color: white;
     padding: 10px;
@@ -225,3 +226,167 @@ body {
   }
 }
     
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+#services{
+  text-align: center;
+}
+#service-section {
+  margin-top: 0px;
+  background-color: white;
+}
+
+#service-section .box {
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+}
+
+#service-section .box img {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+}
+#contact {
+  border: 3px solid #1d5de8;
+  padding: 5px;
+  color: #ffffff;
+  background: #35424a;
+  height: 15em;
+  width: 100%;
+}
+
+#contact h1 {
+  float: left;
+}
+
+#contact form {
+  float: right;
+  margin-top: 15px;
+}
+
+#contact input {
+  padding: 4px;
+  height: 20px;
+  width: 200px;
+}
+.contact-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+}
+
+.contact-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-header h2 {
+  margin: 0;
+  color: #35424a;
+}
+
+.contact-body p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.contact-body a {
+  color: #1d5de8;
+  text-decoration: none;
+}
+
+.contact-body a:hover {
+  text-decoration: underline;
+}
+
+#services {
+  text-align: center;
+}
+#login-password-requirements{
+  font-size: 10px;
+}
+
+#contactBox {
+  margin: 4px;
+  gap: 3px;
+  padding: 0px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  background-color: #AACFE2;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30em;
+  height: 15em;
+}
+
+#contactName {
+  margin: 0px;
+  padding: 0px;
+}
+
+#contactMsg {
+  padding: 5px;
+  background-color: rgb(229, 183, 249);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#contactMail {
+  padding: 2px;
+  background-color: rgb(183, 213, 249);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+#contact-complete {
+  background-color: #35424a;
+  border: 2px solid blue;
+  margin: 2px;
+  border-radius: 10px;
+  color: whitesmoke;
+  width: 150px;
+}
+
+#contact-delete {
+  background-color: rgb(211, 0, 0);
+  border: 2px solid red;
+  margin: 2px;
+  border-radius: 10px;
+  color: whitesmoke;
+  width: 150px;
+}
+
+footer {
+  border: 3px solid #1d5de8;
+  padding: 20px;
+  text-align: center;
+  color: rgb(240, 240, 248);
+  margin: 0px;
+  background-color: #0c0a7ee6;
+}
