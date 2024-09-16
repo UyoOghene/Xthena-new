@@ -1,22 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #16076d;
-    /* overflow-x: hidden ; */
+    background-color: #442ebe;
+    overflow-x: hidden ;
   }
 
   .container {
     width: 80%;
     height: 5em;
     padding: 3px;
-    margin: auto;
+    margin: 0;
     overflow: hidden;
+  }
+  .container::after {
+    content: "";
+    display: table;
+    clear: both;
   }
 
   #header-icon{
-    height: 100px ;
-    width: 150px ;
+    height: 4em ;
+    width: auto ;
+    border-radius: 30px;
   } 
 
   #header {
@@ -25,7 +35,7 @@ body {
     top: 0px;
     background-color: rgba(10, 8, 10, 0.4);    
     color: #ffffff;
-    padding: 15px;
+    padding: 10px;
     height: 5em;
     width: 100%;
     min-height: 50px;
@@ -97,64 +107,84 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: -7em;
-    background-image: url('/Images/download.jpeg'); 
+    /* margin: 0; */
+    background-image: url('/Images/showcasepng2.png'); 
     background-size: cover; /* Ensures the image covers the whole div */
-    background-position: center; /* Centers the image */
+    background-position: center center;  
     background-repeat: no-repeat; /* Prevents the image from repeating */
     height: 30em;
     width: 100%; 
     color: white;
     padding: 10px;
+    filter: none; /* Make sure no blur filters are applied */
+    opacity: 1;   /* Set opacity to 100% */
      object-fit: contain;
+     /* overflow: hidden;  */
+
       }  
+
 
     #showcase-box{
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-
-    }
-
-    #showcase-h1{
-    }
-    #showcase-h1{
-      /* transform: rotateX(300deg); */
-      /* transform: scale(1,2); */
-      /* transform: translate(50px,100px) ; */
-      width: 100px;
-      height: 100px;
-      /* background: red; */
-      transition: width 2s, height 2s, transform 2s;
+        flex-shrink: 1;
       
-      }
-    #showcase-h1:hover{
-      width: 300px;
-      height: 300px;
-      transform: rotate(180deg);
-        }
 
-    #showcase-p{
-      margin: 0;
-      padding: 0;
-      position: relative;
-        animation-name: example;
-        animation-duration: 3s;
-        animation-delay: 2s;
-        animation-iteration-count: 3;
-        /* animation-iteration-count: infinite; */
-        animation-timing-function: ease-in;
-    
     }
-      @keyframes example {
-        /* from {font-size: small;}
-        to {font-size: x-large;}
-        from {color: blue;}
-        to {color: #000;;} */
-        0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
-      }
+
+/* Showcase h1 animation */
+#showcase-h1 {
+  position: relative;
+  color: black;
+  animation: slideFromTop 2s forwards, changeColor 2s 2s forwards; 
+}
+
+@keyframes slideFromTop {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: black;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+/* Showcase p animation */
+#showcase-p {
+  color: #442ebe;
+  position: relative;
+  animation: moveAndScale 4s ease-in-out forwards; /* Move left, right, then center and scale */
+}
+
+@keyframes moveAndScale {
+  0% {
+    left: 0;
+    transform: scale(1);
+  }
+  25% {
+    left: 200px;
+  }
+  50% {
+    left: -200px;
+  }
+  75% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+    transform: scale(1.5);
+  }
+}
     
