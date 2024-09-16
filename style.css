@@ -213,30 +213,68 @@ body {
   margin: auto;
   overflow: hidden;
 }
-#services{
+#services {
   text-align: center;
+  padding: 50px 0;
+  background-color: #f7f7f7; /* Light background for contrast */
+}
+#services-title{
+  color: #0f057e;
 }
 #service-section {
   margin-top: 0px;
-  background-color: white;
+  background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; /* Add padding to the section */
 }
 
 #service-section .box {
-  float: left;
+  display: inline-block; /* Change from float to inline-block for better layout */
   text-align: center;
-  width: 30%;
-  padding: 10px;
+  height: 10em;
+  width: 28%; /* Slightly narrower boxes for better spacing */
+  padding: 10px; /* Increase padding for better spacing */
+  margin: 1%; /* Add margin between boxes */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+#service-section .box:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
 }
 
 #service-section .box img {
-  width: 150px;
-  height: 150px;
-  border-radius: 30px;
+  width: 120px; /* Slightly reduce image size */
+  height: 120px;
+  border-radius: 50%; /* Circle-shaped images */
+  margin-bottom: 15px; /* Space between image and text */
+}
+
+#service-section .box h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #0f057e;
+}
+
+#service-section .box p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+#our-contact{
+ 
+  margin-top: 0px;
+  height: 100%;
 }
 #contact {
-  background-color: #f4f4f4; /* Light background color */
-  padding: 50px 0; /* Space around the section */
-  text-align: center; /* Center-align text and form elements */
+  /* background-color: #98c1d9;  */
+  background: radial-gradient(circle at center, #98c1d9, #442ebe);
+  padding: 50px 0; 
+  text-align: center;
+  margin: 0px;
 }
 
 #contact h1 {
