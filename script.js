@@ -60,6 +60,43 @@ const navUl = document.querySelector('#nav-ul');
 // Functions
 
 // Show button when user scrolls down
+// Get the modal element
+var modal = document.getElementById("imgModal");
+
+// Get the image inside the modal and the description element
+var modalImg = document.getElementById("modalImg");
+var imgDescription = document.getElementById("imgDescription");
+
+// Get all project images and attach a click event to each
+var images = document.querySelectorAll(".proj-box");
+images.forEach(function(imageBox) {
+  imageBox.addEventListener("click", function() {
+    var imgSrc = this.querySelector(".projpic").src; // Get the image source
+    var description = this.querySelector(".overlay .proj-description").textContent; // Get the description text
+    
+    // Set the modal content
+    modal.style.display = "block";
+    modalImg.src = imgSrc; // Show the image in the modal
+    imgDescription.textContent = description; // Show the description in the modal
+  });
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Close the modal when the user clicks on <span> (x)
+span.onclick = function() {
+  modal.style.display = "none";
+};
+
+// Close the modal when the user clicks outside the image
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+
 window.onscroll = function() {
   var backToTopBtn = document.getElementById("backToTopBtn");
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
