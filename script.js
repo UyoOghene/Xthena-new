@@ -81,13 +81,7 @@ images.forEach(function(imageBox) {
   });
 });
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
-// Close the modal when the user clicks on <span> (x)
-span.onclick = function() {
-  modal.style.display = "none";
-};
 
 // Close the modal when the user clicks outside the image
 window.onclick = function(event) {
@@ -96,6 +90,24 @@ window.onclick = function(event) {
   }
 };
 
+const projBoxes = document.querySelectorAll(".proj-box");
+
+// When you click on an image, open the modal
+projBoxes.forEach((box) => {
+  box.addEventListener("click", function () {
+    const imgSrc = this.querySelector("img").src;
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+    document.body.classList.add("no-hover"); // Disable hover when modal is open
+  });
+});
+
+// When the user clicks on <span> (x), close the modal
+const span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+  modal.style.display = "none";
+  document.body.classList.remove("no-hover"); // Re-enable hover when modal is closed
+};
 
 window.onscroll = function() {
   var backToTopBtn = document.getElementById("backToTopBtn");
@@ -242,4 +254,4 @@ navToggle.addEventListener('click', function() {
 
 
 // Event Listeners
-contactSubmitBtn.addEventListener('click', storeInput);
+// contactSubmitBtn.addEventListener('click', storeInput);
