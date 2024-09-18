@@ -308,25 +308,6 @@ body {
   z-index: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text, .about-image {
-    max-width: 100%;
-  }
-
-  .about-text h1 {
-    font-size: 32px;
-  }
-
-  .about-text p {
-    font-size: 16px;
-  }
-}
 .container {
   width: 100%;
   margin: auto;
@@ -656,27 +637,6 @@ footer::before {
   z-index: -1;
 }
 
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-right {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-right {
-    margin-top: 10px;
-  }
-}
-
 
 #projects {
   background-color: #f5f7fa; /* Light background for contrast */
@@ -827,62 +787,6 @@ h3 {
 }
 
 
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-  /* Show the toggle button on tablets */
-  .nav-toggle {
-    display: block;
-    float: right;
-    margin-top: 10px;
-  }
-
-  /* Hide the regular navigation menu */
-  header nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #35424a;
-    max-height: 100vh; /* Ensures the dropdown doesn't overflow the viewport */
-    overflow-y: auto; /* Allows scrolling if the menu is taller than the viewport */
-}
-
-header nav ul li {
-    padding: 10px 0;
-    border-top: 1px solid #1d5de8;
-    text-align: center; /* Center align the items for better visual on smaller screens */
-}
-
-header nav ul.show {
-    display: block;
-  /* Adjust showcase height */
-}
-.show{
-  display: block;
-}
-  #showcase {
-    height: 70vh;
-  }
-
-  /* Adjust text sizes */
-  #showcase-h1 {
-    font-size: 50px;
-  }
-
-  #showcase-p {
-    font-size: 18px;
-  }
-
-  /* Service boxes */
-  #service-section .box {
-    width: 45%;
-    margin: 2.5%;
-  }
-
-  /* Contact form */
-  #contact-form {
-    padding: 10px;
-  }
-}
 
 #backToTopBtn {
   z-index: 1000;
@@ -963,46 +867,39 @@ header nav ul.show {
   color: #ffda79;
 }
 
+/* General Styles for Smaller Devices (Phones) */
+@media only screen and (max-width: 600px) {
+  /* Adjust header */
+  header {
+    height: auto;
+    padding: 10px;
+  }
 
+  header nav {
+    float: none;
+    margin-top: 0;
+  }
 
-/* Media Query for Phones */
-@media screen and (max-width: 480px) {
-  /* Show the nav-toggle button and hide the full nav by default */
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Hide the nav menu by default */
+  }
+
   .nav-toggle {
     display: block;
   }
-  .show{
-    display: block;
-  }
-  /* Hide the regular navigation menu */
-  header nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #35424a;
+
+  header .highlight, header .current a {
+    font-size: 14px;
   }
 
-  /* Adjust the nav items */
-  header nav ul li {
-    padding: 10px 0;
-    border-top: 1px solid #1d5de8;
+  header a {
+    font-size: 14px;
+    padding: 10px;
   }
 
-  header nav ul.show {
-    display: flex;
-  }
-
-  header nav ul li a {
-    display: block;
-  }
-
-  /* Adjust showcase height */
-  #showcase {
-    height: 60vh;
-    background-position: top center;
-  }
-
-  /* Adjust text sizes */
+  /* Adjust showcase */
   #showcase-h1 {
     font-size: 40px;
   }
@@ -1011,21 +908,167 @@ header nav ul.show {
     font-size: 16px;
   }
 
-  /* Adjust service boxes */
+  /* Adjust about section */
+  #about {
+    padding: 40px 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust services section */
   #service-section .box {
     width: 90%;
-    margin: 5% auto;
+    margin: 10px auto;
+    height: auto;
   }
 
-  /* Contact form */
+  /* Adjust contact form */
   #contact-form {
     width: 90%;
+    padding: 15px;
+  }
+
+  #contact-form input[type="email"], #name-input, #phone-input {
+    width: 100%;
+  }
+
+  /* Adjust footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left, .footer-right {
+    margin-bottom: 20px;
+  }
+
+  .social-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Adjust projects section */
+  #projects-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Adjust team section */
+  .team-members {
+    flex-direction: column;
+  }
+
+  .team-member {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  /* Adjust back to top button */
+  #backToTopBtn {
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* Adjust modal */
+  .modal-content {
+    width: 80vw;
+    height: auto;
+  }
+}
+
+/* Styles for Tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust header */
+  header {
+    height: auto;
     padding: 10px;
   }
 
-  /* Footer adjustments */
-  footer {
-    padding: 10px;
-    font-size: 14px;
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Adjust showcase */
+  #showcase-h1 {
+    font-size: 60px;
+  }
+
+  #showcase-p {
+    font-size: 20px;
+  }
+
+  /* Adjust about section */
+  #about {
+    padding: 60px 0;
+  }
+
+  .about-container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust services section */
+  #service-section .box {
+    width: 45%;
+  }
+
+  /* Adjust contact form */
+  #contact-form {
+    width: 80%;
+  }
+
+  /* Adjust footer */
+  .footer-container {
+    flex-direction: row;
+  }
+
+  .social-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Adjust projects section */
+  #projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Adjust team section */
+  .team-members {
+    flex-direction: row;
+  }
+
+  .team-member {
+    width: 45%;
+  }
+
+  /* Adjust back to top button */
+  #backToTopBtn {
+    right: 20px;
+    bottom: 20px;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  /* Adjust modal */
+  .modal-content {
+    width: 60vw;
+    height: auto;
   }
 }
+
+

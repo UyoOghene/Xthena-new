@@ -126,60 +126,6 @@ document.getElementById("backToTopBtn").addEventListener("click", function() {
   });
 });
 
-// document.getElementById("facebook-login").addEventListener("click", function() {
-//   signInWithPopup(auth, provider2)
-//   .then((result) => {
-//     // The signed-in user info.
-//     const user = result.user;
-
-//     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-//     const credential = FacebookAuthProvider.credentialFromResult(result);
-//     const accessToken = credential.accessToken;
-    
-//     if (user) {
-//       console.log(user); 
-//       alert("Welcome "+user.displayName);
-//       window.location.href = './home.html'; 
-//   }
-//   })
-//   .catch((error) => {
-//     // Handle Errors here.
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     console.log(errorMessage);
-//     // The email of the user's account used.
-//     const email = error.customData.email;
-//     // The AuthCredential type that was used.
-//     const credential = FacebookAuthProvider.credentialFromError(error);
-
-//     // ...
-//   });		  		  
-// });
-
-// const onGoogleLogin = () => {
-//   const user = auth.currentUser;
-//   if (user) {
-//       console.log(user.email); 
-//       window.location.href = './home.html'; 
-//   }
-// };
-
-// googleBtn.addEventListener('click', () => {
-//   signInWithPopup(auth, provider)
-//       .then((result) => {
-//           const user = result.user;
-//           console.log(user);
-//           console.log('googlebtn');
-//           localStorage.setItem('email', user.email);
-//           localStorage.setItem('userStore', JSON.stringify(user));
-//           localStorage.setItem('pic', user.photoURL);
-//           loginContainer.style.display = 'none';
-//           onGoogleLogin();
-//       })
-//       .catch((error) => {
-//           console.error(error.code, error.message);
-//       });
-// });
 
 function showToast(){
   Toastify({
