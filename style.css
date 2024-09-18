@@ -9,6 +9,12 @@ body {
     background-color: #f5f4f7;
     overflow-x: hidden ;
   }
+  button {
+    border-radius: 20px;
+    border: none;
+    background-color: #799be6;
+  }
+  
 
   .head-container {
     width: 80%;
@@ -299,8 +305,8 @@ body {
   color: #442ebe; /* Match with the theme color */
 }
 
-#contact-form input[type="email"],
-#contact-form input[type="text"] {
+#contact-form input[type="email"]
+ {
   width: calc(100% - 20px); /* Full width minus padding */
   padding: 10px;
   margin-bottom: 15px;
@@ -309,13 +315,30 @@ body {
   font-size: 1em;
 }
 
-#contact-form input[type="text"] {
-  height: 150px; /* Increase the height for the message box */
-  resize: vertical; /* Allow vertical resizing */
+
+#name-input{
+  width: calc(100% - 20px); 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  height:2em ;
+}
+#phone-input{
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  height: 150px;
+  resize: vertical; 
+
 }
 
 #contactsubmit-btn {
-  background-color: #442ebe; /* Match with the theme color */
+  background-color: #442ebe;
   color: white;
   padding: 15px 30px;
   border: none;
@@ -325,7 +348,7 @@ body {
 }
 
 #contactsubmit-btn:hover {
-  background-color: #3a1b77; /* Slightly darker color on hover */
+  background-color: #3a1b77;
 }
 .contact-card {
   background-color: #ffffff;
@@ -435,11 +458,338 @@ body {
   width: 150px;
 }
 
+/* Footer Styling */
 footer {
-  border: 3px solid #1d5de8;
+  background: linear-gradient(135deg, #0f057e 0%, #6a5acd 100%); /* Gradient background */
+  color: #f0f0f8;
+  padding: 40px 0; /* Increased padding for better spacing */
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* A more modern font */
+  position: relative;
+  z-index: 1;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left {
+  margin-bottom: 20px; /* Spacing between left and right sections */
+}
+
+.footer-left p, .footer-left a {
+  margin: 10px 0;
+  font-size: 16px; /* Slightly larger and cleaner font */
+  font-weight: 500;
+  color: #f0f0f8;
+  transition: color 0.3s ease;
+}
+
+.footer-left a {
+  color: #ffda79; /* Accent color for links */
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+  color: #ffd700; /* Brighter accent color on hover */
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.social-icon img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background-color: #ffda79; /* Change background on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.social-icon img:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Decorative Elements */
+footer::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url('./Images/footer-wave.svg'); /* Add a wave effect or decorative pattern */
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-right {
+    margin-top: 10px;
+  }
+}
+
+
+#projects {
+  background-color: #f5f7fa; /* Light background for contrast */
+  padding: 50px 0;
+}
+
+#project-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#projecth1 {
+  font-size: 36px;
+  color: #0f057e;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* Increase gap between project boxes */
+  justify-content: center;
+  padding: 0 20px; /* Add padding to center the grid */
+}
+
+.proj-box {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+  cursor: pointer; /* Indicate that the box is clickable */
+}
+
+.proj-box:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.projpic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out; /* Image zoom effect on hover */
+}
+
+.proj-box:hover .projpic {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.proj-box:hover .overlay {
+  opacity: 1; /* Reveal overlay on hover */
+}
+
+.proj-description {
+  font-size: 18px;
   padding: 20px;
   text-align: center;
-  color: rgb(240, 240, 248);
-  margin: 0px;
-  background-color: #0c0a7ee6;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Media Query for Tablets */
+@media screen and (max-width: 768px) {
+  /* Show the toggle button on tablets */
+  .nav-toggle {
+    display: block;
+    float: right;
+    margin-top: 10px;
+  }
+
+  /* Hide the regular navigation menu */
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #35424a;
+    max-height: 100vh; /* Ensures the dropdown doesn't overflow the viewport */
+    overflow-y: auto; /* Allows scrolling if the menu is taller than the viewport */
+}
+
+header nav ul li {
+    padding: 10px 0;
+    border-top: 1px solid #1d5de8;
+    text-align: center; /* Center align the items for better visual on smaller screens */
+}
+
+header nav ul.show {
+    display: block;
+  /* Adjust showcase height */
+}
+.show{
+  display: block;
+}
+  #showcase {
+    height: 70vh;
+  }
+
+  /* Adjust text sizes */
+  #showcase-h1 {
+    font-size: 50px;
+  }
+
+  #showcase-p {
+    font-size: 18px;
+  }
+
+  /* Service boxes */
+  #service-section .box {
+    width: 45%;
+    margin: 2.5%;
+  }
+
+  /* Contact form */
+  #contact-form {
+    padding: 10px;
+  }
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0f057e; /* Match with the site's color theme */
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Initially hidden */
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+#backToTopBtn:hover {
+  background-color: #ffda79; /* Button color on hover */
+  color: #0f057e; /* Text color on hover */
+}
+
+#backToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Media Query for Phones */
+@media screen and (max-width: 480px) {
+  /* Show the nav-toggle button and hide the full nav by default */
+  .nav-toggle {
+    display: block;
+  }
+  .show{
+    display: block;
+  }
+  /* Hide the regular navigation menu */
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #35424a;
+  }
+
+  /* Adjust the nav items */
+  header nav ul li {
+    padding: 10px 0;
+    border-top: 1px solid #1d5de8;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  header nav ul li a {
+    display: block;
+  }
+
+  /* Adjust showcase height */
+  #showcase {
+    height: 60vh;
+    background-position: top center;
+  }
+
+  /* Adjust text sizes */
+  #showcase-h1 {
+    font-size: 40px;
+  }
+
+  #showcase-p {
+    font-size: 16px;
+  }
+
+  /* Adjust service boxes */
+  #service-section .box {
+    width: 90%;
+    margin: 5% auto;
+  }
+
+  /* Contact form */
+  #contact-form {
+    width: 90%;
+    padding: 10px;
+  }
+
+  /* Footer adjustments */
+  footer {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
