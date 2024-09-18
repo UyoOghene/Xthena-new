@@ -585,12 +585,14 @@ footer::before {
 #projects-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px; /* Increase gap between project boxes */
+  gap: 20px; /* Increase gap between project boxes */
   justify-content: center;
   padding: 0 20px; /* Add padding to center the grid */
 }
 
 .proj-box {
+  width: 20em;
+  height: auto;
   position: relative;
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -754,7 +756,7 @@ header nav ul.show {
   display: block;
   /* max-width: 90%;
   max-height: 80%; */
-  width: 50vw;
+  width: 40vw;
   height: auto;
   overflow: hidden;
   border-radius: 10px;
