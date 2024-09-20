@@ -17,7 +17,7 @@ body {
   
 
   .head-container {
-    width: 80%;
+    width: 100%;
     height: 5em;
     padding: 3px;
     margin: 0;
@@ -47,6 +47,19 @@ body {
     width: 100%;
     min-height: 50px;
   }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute; /* Use absolute positioning to place it inside the header */
+    right: 20px; /* Align it to the right side of the header */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust for proper vertical centering */
+}
+
   
   header a {
     color: #ffffff;
@@ -107,6 +120,7 @@ body {
     color: white;
     font-size: 30px;
     cursor: pointer;
+    position: relative;
   }
 
   #showcase {
@@ -641,7 +655,7 @@ footer::before {
 
 #projects {
   background-color: #f5f7fa; /* Light background for contrast */
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 #project-title {
@@ -659,13 +673,13 @@ footer::before {
 #projects-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px; /* Increase gap between project boxes */
+  gap: 10px; /* Increase gap between project boxes */
   justify-content: center;
   padding: 0 20px; /* Add padding to center the grid */
 }
 
 .proj-box {
-  width: 20em;
+  width: 18em;
   height: auto;
   position: relative;
   background-color: #ffffff;
@@ -869,6 +883,9 @@ h3 {
   color: #ffda79;
 }
 
+.show{
+  display: block;
+}
 /* Media Query for Tablets and Phones */
 @media (max-width: 768px) {
   header nav ul {
@@ -876,6 +893,21 @@ h3 {
     align-items: center;
     margin-top: 10px;
   }
+  #nav-ul{
+    display: block;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 1001;
+    /* background: none; */
+    border: none;
+    color: rgb(19, 13, 131);
+    font-size: 30px;
+    cursor: pointer;
+  }
+
 
   header nav ul li {
     margin: 10px 0;
@@ -949,6 +981,16 @@ h3 {
   header a {
     font-size: 14px;
   }
+  .nav-toggle {
+    display: flex;
+    /* background: none; */
+    z-index: 1001;
+    border: none;
+    color: blue;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
 
   #showcase-h1 {
     font-size: 40px;
