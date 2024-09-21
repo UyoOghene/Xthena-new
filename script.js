@@ -56,6 +56,7 @@ const contactSubmitBtn = document.querySelector('#contactsubmit-btn');
 const servicesLink = document.querySelector('#services-a');
 const navToggle = document.querySelector('.nav-toggle');
 const navUl = document.querySelector('#nav-ul');
+const dropdown = document.querySelector('.dropdown');
 
 // Functions
 
@@ -178,26 +179,25 @@ const saveContactInfo = (email, name, message) => {
 
 // Responsive navbar
 navToggle.addEventListener('click', function() {
-    alert("hki")
-    // navUl.classList.toggle('show');
-    navUl.style.display = 'block'
+    dropdown.classList.toggle('show');
 });
-// navToggle.addEventListener('mouseover', function() {
-//   navUl.classList.add('show');
-// });
+
+navToggle.addEventListener('mouseover', function() {
+  dropdown.classList.add('show');
+});
 
 // navToggle.addEventListener('mouseout', function() {
-//   navUl.classList.remove('show');
+//   dropdown.classList.remove('show');
 // });
 
-// navUl.addEventListener('mouseover', function() {
-//   navUl.classList.add('show');
-// });
+dropdown.addEventListener('mouseover', function() {
+  dropdown.classList.add('show');
+});
 
-// navUl.addEventListener('mouseout', function() {
-//   navUl.classList.remove('show');
-// });
+dropdown.addEventListener('mouseout', function() {
+  dropdown.classList.remove('show');
+});
 
 
 // Event Listeners
-// contactSubmitBtn.addEventListener('click', storeInput);
+contactSubmitBtn.addEventListener('click', storeInput);
