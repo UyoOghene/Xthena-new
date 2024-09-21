@@ -858,6 +858,7 @@ h3 {
   display: none; 
   position: fixed;
   z-index: 1001; 
+
   left: 0;
   top: 0;
   width: 100%;
@@ -874,6 +875,8 @@ h3 {
   max-height: 80%; */
   width: 40vw;
   height: auto;
+  margin-top: 20px;
+
   overflow: hidden;
   border-radius: 10px;
 }
@@ -919,6 +922,18 @@ h3 {
     color: rgb(19, 13, 131);
     font-size: 30px;
     cursor: pointer;
+  }
+  
+  .modal img{
+    margin: auto;
+    display: block;
+    /* max-width: 90%;
+    max-height: 80%; */
+    width: 70vw;
+    height: auto;
+    margin-top: 20px;
+  
+  
   }
 
   #showcase-h1 {
@@ -1005,6 +1020,7 @@ h3 {
   header a {
     font-size: 14px;
   }
+
   header nav ul {
      /* display: block; 
     width: 100%; 
