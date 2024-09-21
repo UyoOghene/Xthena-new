@@ -931,6 +931,7 @@ h3 {
     max-height: 80%; */
     width: 70vw;
     height: auto;
+    aspect-ratio: 2/2;
     margin-top: 20px;
   
   
