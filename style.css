@@ -166,19 +166,19 @@ body {
   
   @keyframes carousel {
     0% {
-      background-image: url('/Images/newbckgrndpic.jpg');
+      background-image: url('/Images/backgroundpic.jpeg');
     }
     40% {
-      background-image: url('/Images/newbckgrndpic.jpg');
+      background-image: url('/Images/backgroundpic.jpeg');
     }
     50% {
-      background-image: url('/Images/newbgroundpic2.jpg');
+      background-image: url('/Images/backgroundpic.jpeg');
     }
     90% {
-      background-image: url('/Images/newbgroundpic2.jpg');
+      background-image: url('/Images/showcasepng2.png');
     }
     100% {
-      background-image: url('/Images/newbgroundpic2.jpg');
+      background-image: url('/Images/showcasepng2.png');
     }
   }
   
@@ -948,6 +948,22 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 0 10px; /* Adjust padding for smaller screens */
   }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Hidden by default */
+    transition: opacity 0.3s ease;
+  }
+  
 
   .proj-box {
     width: 100%;
