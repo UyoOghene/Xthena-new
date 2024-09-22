@@ -1111,7 +1111,7 @@ h3 {
   .about-text p {
     font-size: 16px;
   }
-  #services{
+  /* #services{
     display: flex;
     justify-content: center;
     flex-direction: column ;
@@ -1155,8 +1155,35 @@ h3 {
     justify-content: center;
     align-items: center;
     min-height: 600px; 
+  } */
+  #service-section {
+    padding: 20px;
+    height: auto; /* Let the content dictate the height */
   }
-  
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Space between service boxes */
+  }
+
+  .box img {
+    width: 80%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+  }
+
+  .serv-text {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px; /* Adjust font size */
+  }
+
+  #services-title {
+    font-size: 24px;
+  }
+
   #contact-form input[type="email"],
   #name-input,
   #phone-input {
