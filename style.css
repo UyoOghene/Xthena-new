@@ -1133,8 +1133,8 @@ h3 {
     transition: transform 0.3s ease;
     text-align: center;
     height: 30em;
-    width: 70%; 
-    padding: 5px;
+    width: 30em; 
+    padding: 10px;
     margin-top: 5px;
     margin: 5px; 
     background-color: #ffffff;
@@ -1154,7 +1154,7 @@ h3 {
   }
   #service-section {
     height: 100vh;
-    padding: 40px 0;
+    padding: 50px 0;
     margin-top: 0px;
     background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
     display: flex;
