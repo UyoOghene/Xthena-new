@@ -344,11 +344,11 @@ body {
   z-index: 0;
 }
 
-.container {
+/* .container {
   width: 100%;
   margin: auto;
   overflow: hidden;
-}
+} */
 #services {
   text-align: center;
   padding: 15px 0;
@@ -521,9 +521,6 @@ body {
   text-decoration: underline;
 }
 
-#services {
-  text-align: center;
-}
 #login-password-requirements{
   font-size: 10px;
 }
@@ -1074,10 +1071,12 @@ h3 {
     height: auto;
   }
   #services{
+    display: flex;
+    justify-content: center;
+    flex-direction: column ;
     height: auto;
  
   }
-  
   
 
   #contact-form input[type="email"],
