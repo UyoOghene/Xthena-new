@@ -351,13 +351,15 @@ body {
 } */
 
 
-/* #services {
+#services {
   text-align: center;
   padding: 15px 0;
   background-color: #f7f7f7; 
-} */
+  background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
 
-#services{
+}
+
+/* #services{
   display: flex;
   justify-content: center;
   flex-direction: column ;
@@ -366,7 +368,7 @@ body {
   width: 100%;
   align-items: center;
   background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
-}
+} */
 
 #services-title{
   color: #0f057e;
@@ -376,21 +378,27 @@ body {
   font-size: large;
   font-weight: 800px;
 }
-#service-section {
+/* #service-section {
   height: 100vh;
-  padding: 40px 0; /* Adjust the padding as needed */
+  padding: 40px 0; 
   margin-top: 0px;
   background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 600px; /* Adjust height based on your needs */
+  min-height: 600px;
+} */
+
+#service-section{
+  background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);
+    padding: 40px 0; 
+
 }
 
-/* #service-section .box {
+#service-section .box {
   display: inline-block; 
   text-align: center;
-  height: 10em;
+  height: 40%;
   width: 28%; 
   padding: 10px;
   margin: 1%; 
@@ -398,9 +406,9 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-} */
+}
 
-.box{
+/* .box{
   display:flex;
   justify-content: center;
   transition: transform 0.3s ease;
@@ -414,7 +422,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-}
+} */
 .serv-text{
   display: flex;
   justify-content: center;
@@ -1005,6 +1013,13 @@ h3 {
   .about-image {
     flex: none;
   }
+  #service-section .box img {
+    width: 120px; /* Slightly reduce image size */
+    height: 120px;
+    border-radius: 50%; /* Circle-shaped images */
+    margin-bottom: 15px; /* Space between image and text */
+  }
+  
 
   #projects-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
