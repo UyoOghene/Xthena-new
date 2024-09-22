@@ -1115,13 +1115,14 @@ h3 {
   .about-text p {
     font-size: 16px;
   }
-  /* #services{
+  #services{
     display: flex;
     justify-content: center;
     flex-direction: column ;
-    height: 80vh;
+    height: auto;
     background-color: #f7f7f7; 
     width: 100%;
+    
     align-items: center;
     background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
   }
@@ -1150,8 +1151,16 @@ h3 {
     font-size: large;
     font-weight: 800px;
   }
+
+  #service-section .box img {
+    width: 95px; /* Slightly reduce image size */
+    height: 95px;
+    border-radius: 50%; /* Circle-shaped images */
+    margin-bottom: 15px; /* Space between image and text */
+  }
+  
   #service-section {
-    height: 100vh;
+    height: auto;
     padding: 50px 0;
     margin-top: 0px;
     background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
@@ -1159,35 +1168,7 @@ h3 {
     justify-content: center;
     align-items: center;
     min-height: 600px; 
-  } */
-  #service-section {
-    padding: 20px;
-    height: auto; /* Let the content dictate the height */
   }
-
-  .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px; /* Space between service boxes */
-  }
-
-  .box img {
-    width: 80%; /* Adjust image size */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px;
-  }
-
-  .serv-text {
-    text-align: center;
-    padding: 10px;
-    font-size: 16px; /* Adjust font size */
-  }
-
-  #services-title {
-    font-size: 24px;
-  }
-
   #contact-form input[type="email"],
   #name-input,
   #phone-input {
