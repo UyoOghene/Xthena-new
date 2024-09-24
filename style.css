@@ -174,19 +174,24 @@ body {
   
   @keyframes carousel {
     0% {
-      background-image: url('/Images/backgroundpic.jpeg');
+      background-image: url('/Images/newotherprojpic3.jpg');
+      /* background-image: url('/Images/backgroundpic.jpeg'); */
     }
     40% {
-      background-image: url('/Images/backgroundpic.jpeg');
+      background-image: url('/Images/newotherprojpic3.jpg');
+      /* background-image: url('/Images/backgroundpic.jpeg'); */
     }
     50% {
-      background-image: url('/Images/backgroundpic.jpeg');
+      background-image: url('/Images/newotherprojpic3.jpg');
+      /* background-image: url('/Images/backgroundpic.jpeg'); */
     }
     90% {
-      background-image: url('/Images/showcasepng2.png');
+      background-image: url('/Images/newprojpic2.jpg');
+      /* background-image: url('/Images/backgroundpic.jpeg'); */
     }
     100% {
-      background-image: url('/Images/showcasepng2.png');
+      background-image: url('/Images/newprojpic2.jpg');
+      /* background-image: url('/Images/backgroundpic.jpeg'); */
     }
   }
   
