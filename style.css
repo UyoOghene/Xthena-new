@@ -248,6 +248,7 @@ body {
   color: #2b814f;
   position: relative;
   font-family: 'Brush Script MT', cursive;
+  font-weight: bolder;
   animation: moveAndScale 4s ease-in-out forwards,changeColor2 4s infinite; 
 }
 
