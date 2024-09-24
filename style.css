@@ -8,11 +8,13 @@ body {
     margin: 0;
     background-color: #f5f4f7;
     overflow-x: hidden ;
+    font-family: Trajan Pro sans-serif;
   }
   button {
     border-radius: 20px;
     border: none;
-    background-color: #799be6;
+    /* background-color: #799be6; */
+    background-color: #00563B;
   }
     #nav-ul{
       margin-top: 20px;
@@ -25,7 +27,8 @@ body {
     position: absolute; /* Position relative to the parent li */
     flex-direction: column;
     z-index: 1001; /* Ensure it's above other content */
-    color: #0f057e;
+    color: #00563B;
+    /* color: #0f057e; */
     top: 100%; /* Align it below the toggle button */
     right: 0; /* Align it to the right */
     border-radius: 30px;
@@ -33,7 +36,8 @@ body {
 
 }  
 .dropdown a{
-  color: #0f057e;
+  /* color: #0f057e; */
+  color: #00563B;
   font-weight: bold;
   font-size: 13px;
 
@@ -119,13 +123,13 @@ body {
   }
   
   header a:hover {
-    color: #3d209d;
+    color:#00563B;
     font-weight: bold;
-    border-bottom: 2px solid #362ca9;
+    border-bottom: 2px solid #00563B;
   }
   
   header a:active {
-    color: #4124b3;
+    color: #00563B;
     background-color: none;
   }
   
@@ -199,11 +203,15 @@ body {
 
 #showcase-h1 {
   font-weight: bolder;
+
   font-size: 80px;
   position: relative;
-  color: black;
-  animation: slideFromTop 2s forwards, changeColor 2s 2s forwards; 
+  color:  #00563B;
+  
+  animation: slideFromTop 2s forwards, changeColor 2s 2s forwards;
+  /* animation: moveAndScale 4s ease-in-out forwards  */
 }
+
 
 @keyframes slideFromTop {
 
@@ -219,20 +227,30 @@ body {
 
 @keyframes changeColor {
   0% {
-    color: black;
+    color:  rgba(255, 102, 0, 0.932);
+    transform: scale(1);
+
+  }
+  50% {
+    color: rgba(255, 102, 0, 0.932);
   }
   100% {
-    color: blue;
+    color: #00563B;
+    transform: scale(3);
+
   }
 
 }
+
 
 
 #showcase-p {
-  color: #442ebe;
+  color: #2b814f;
   position: relative;
-  animation: moveAndScale 4s ease-in-out forwards; 
+  font-family: 'Brush Script MT', cursive;
+  animation: moveAndScale 4s ease-in-out forwards,changeColor2 4s infinite; 
 }
+
 
 @keyframes moveAndScale {
   0% {
@@ -251,8 +269,22 @@ body {
   100% {
     left: 0;
     transform: scale(2);
+
   }
 }
+@keyframes changeColor2 {
+  0% {
+    color: rgba(255, 102, 0, 0.932);
+  }
+  50% {
+    color: rgba(255, 102, 0, 0.932);
+  }
+
+  100% {
+    color: #00563B;
+  }
+}
+
 /* About Us Section Styles */
 #about {
   padding: 80px 0;
@@ -269,7 +301,7 @@ body {
   left: -50px;
   width: 200px;
   height: 200px;
-  background-color: #00bfff;
+  background-color: #28aa80;
   border-radius: 50%;
   z-index: 0;
   opacity: 0.2;
@@ -309,7 +341,7 @@ body {
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 15px;
-  color: #0077b6;
+  color: #00563B;
 }
 
 .about-text p {
@@ -359,7 +391,7 @@ body {
   text-align: center;
   padding: 15px 0;
   background-color: #f7f7f7; 
-  background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
+  background: radial-gradient(circle at center, #ffffff, #98c1d9, #00563B);  padding: 40px 0; 
 
 }
 
@@ -375,7 +407,7 @@ body {
 } */
 
 #services-title{
-  color: #0f057e;
+  color: #00563B;
   padding: 10px;
   margin: 0;
   margin-top:5px ;
@@ -394,7 +426,7 @@ body {
 } */
 
 #service-section{
-  background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);
+  background: radial-gradient(circle at center, #ffffff, #98c1d9, #00563B);
     padding: 40px 0; 
 
 }
@@ -450,7 +482,7 @@ body {
 #service-section .box h3 {
   font-size: 1.5em;
   margin-bottom: 5px;
-  color: #0f057e;
+  color: #00563B;
 }
 
 #service-section .box p {
@@ -468,7 +500,7 @@ body {
 }
 #contact {
   /* background-color: #98c1d9;  */
-  background: radial-gradient(circle at center, #98c1d9, #442ebe);
+  background: radial-gradient(circle at center, #98c1d9, #00563B);
   padding: 50px 0; 
   text-align: center;
   margin: 0px;
@@ -493,7 +525,7 @@ body {
   display: block;
   font-size: 1.1em;
   margin-bottom: 5px;
-  color: #442ebe; /* Match with the theme color */
+  color: #00563B; /* Match with the theme color */
 }
 
 #contact-form input[type="email"]
@@ -529,7 +561,7 @@ body {
 }
 
 #contactsubmit-btn {
-  background-color: #442ebe;
+  background-color: #00563B;
   color: white;
   padding: 15px 30px;
   border: none;
@@ -539,7 +571,7 @@ body {
 }
 
 #contactsubmit-btn:hover {
-  background-color: #3a1b77;
+  background-color: #00563B;
 }
 .contact-card {
   background-color: #ffffff;
@@ -630,7 +662,7 @@ body {
 
 #contact-complete {
   background-color: #35424a;
-  border: 2px solid blue;
+  border: 2px solid #00563B;
   margin: 2px;
   border-radius: 10px;
   color: whitesmoke;
@@ -648,7 +680,7 @@ body {
 
 /* Footer Styling */
 footer {
-  background: linear-gradient(135deg, #0f057e 0%, #6a5acd 100%); /* Gradient background */
+  background: linear-gradient(135deg, #00563B 0%, #29c6bbad 100%); /* Gradient background */
   color: #f0f0f8;
   padding: 40px 0; /* Increased padding for better spacing */
   text-align: center;
@@ -744,7 +776,7 @@ footer::before {
 
 #projecth1 {
   font-size: 36px;
-  color: #0f057e;
+  color: #00563B;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -833,7 +865,7 @@ footer::before {
 
 .team-title {
   font-size: 2.5rem;
-  color: #0056b3;
+  color: #00563B;
   margin-bottom: 20px;
 }
 
@@ -888,7 +920,7 @@ h3 {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #0f057e; /* Match with the site's color theme */
+  background-color: #00563B; /* Match with the site's color theme */
   color: white;
   border: none;
   padding: 15px 20px;
@@ -903,7 +935,7 @@ h3 {
 
 #backToTopBtn:hover {
   background-color: #ffda79; /* Button color on hover */
-  color: #0f057e; /* Text color on hover */
+  color: #00563B; /* Text color on hover */
 }
 
 #backToTopBtn.show {
@@ -977,7 +1009,7 @@ h3 {
     z-index: 1001;
     /* background: none; */
     border: none;
-    color: rgb(19, 13, 131);
+    color: #00563B;
     font-size: 30px;
     cursor: pointer;
   }
@@ -1054,7 +1086,7 @@ h3 {
 
   .project-description {
     display: block; /* Ensure description is displayed */
-    color: #442ebe; /* Dark purple text */
+    color: #057070; /* Dark purple text */
     font-size: 16px; /* Adjust font size if needed */
     margin-top: 10px; /* Space above the description */
     z-index: 1001;
@@ -1092,7 +1124,7 @@ h3 {
     /* background: none; */
     z-index: 1001;
     border: none;
-    color: blue;
+    color: #00563B;
     font-size: 40px;
     cursor: pointer;
   }
@@ -1124,7 +1156,7 @@ h3 {
     width: 100%;
     
     align-items: center;
-    background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
+    background: radial-gradient(circle at center, #ffffff, #98c1d9, #00563B);  padding: 40px 0; 
   }
   .box{
     display:flex;
@@ -1144,7 +1176,7 @@ h3 {
   
   
   #services-title{
-    color: #0f057e;
+    color: #00563B;
     padding: 10px;
     margin: 0;
     margin-top:5px ;
@@ -1163,7 +1195,7 @@ h3 {
     height: auto;
     padding: 50px 0;
     margin-top: 0px;
-    background: radial-gradient(circle at center, #ffffff, #98c1d9, #442ebe);  padding: 40px 0; 
+    background: radial-gradient(circle at center, #ffffff, #98c1d9, #442#00563B);  padding: 40px 0; 
     display: flex;
     justify-content: center;
     align-items: center;
